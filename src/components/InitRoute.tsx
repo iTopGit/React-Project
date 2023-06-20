@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import IndexPage from './IndexPage/IndexPage'
 import BoardPage from './BoardPage'
 import MatLayout from './MatLayout'
 import ScorePage from './ScorePage/ScorePage'
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
 
+                element: <IndexPage />,
+            },
+            {
+                path: 'board',
                 element: <BoardPage />,
             },
             {

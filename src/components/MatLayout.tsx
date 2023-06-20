@@ -21,7 +21,7 @@ function MatLayout() {
 
     return (
         <>
-            <Box sx={{ flexGrow: 1 }}>
+            {/* <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Toolbar>
                         <Typography
@@ -41,12 +41,8 @@ function MatLayout() {
                         </Button>
                     </Toolbar>
                 </AppBar>
-            </Box>
-            <Container
-                sx={{
-                    mt: 2,
-                }}
-            >
+            </Box> */}
+            <Container>
                 {/* Where the each page show up in the same layout */}
                 <Outlet />
             </Container>

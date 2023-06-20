@@ -1,6 +1,7 @@
 import AllCard, { ICard } from './AllCard'
 import BoardContainer from './BoardContainer'
 
+
 // Pick Card from AllCard
 const cards: ICard[] = [AllCard.coolDog, AllCard.headCat, AllCard.orangeDog]
 
@@ -20,3 +21,4 @@ function BoardPage() {
 }
 
 export default BoardPage
+

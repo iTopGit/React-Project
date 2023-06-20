@@ -1,0 +1,5 @@
+main -> app -> MatApp -> InitRoute -> MatLayout
+                                   -> Index 
+                                   -> BoardPage
+                                   -> ScorePage -> ScoreForm
+                                                -> ScoreList
