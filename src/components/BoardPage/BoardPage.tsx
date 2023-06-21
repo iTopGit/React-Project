@@ -1,8 +1,11 @@
-import BoardContainer from './BoardContainer'
-
+import DisplayBoard from './DisplayBoard';
+import InitBoard from './InitBoard'
 
 function BoardPage() {
-    return <BoardContainer />
+    const board =  <InitBoard />
+
+    // const brick =  <InitBrick />
+    return <DisplayBoard board={board}/>;
 }
 
 export default BoardPage

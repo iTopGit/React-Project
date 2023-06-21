@@ -1,5 +1,5 @@
 
-function PlayGame(board) {
+function PlayGame() {
     board[0][0] = 1
 }
 
