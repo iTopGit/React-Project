@@ -1,7 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import IndexPage from './IndexPage/IndexPage'
-import BoardPage from './BoardPage'
+import BoardPage from './BoardPage/BoardPage'
 import MatLayout from './MatLayout'
 import ScorePage from './ScorePage/ScorePage'
 
