@@ -1,50 +1,36 @@
-import { useNavigate } from 'react-router-dom'
-import { Button, Grid, TextField, Typography} from "@mui/material"
-
-// API
-import { ProjectName } from '../../App'
-import { useState } from 'react'
-import { IScoreRequest, getAllAppScores } from '../../api/scoreApi'
-import IndexForm from './IndexForm'
+import { Card, Grid, Typography } from "@mui/material";
+import IndexForm from "./IndexForm";
 
 function IndexPage() {
-    
-
-    // const [name, setName] = useState('');
-
-    let username = ''
-
-    const [scoresList, setScoresList] = useState<IScoreRequest[]>([])
-
-    const handleSubmitSuccess = async () => {
-        const result = await getAllAppScores(ProjectName)
-        setScoresList(result!)
+    function handleSubmitSuccess(): void {
+        throw new Error("Function not implemented.");
     }
 
-    // check
-    const isNameEmpty = username.trim() === '';
+    // ...
 
     return (
-        <>
-            <Grid 
-                container
-                justifyContent="center"
-                alignItems="center"
-                height="100vh"
-                wrap='wrap'
-                spacing={1}
+        <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
+            height="100vh"
+        >
+            <Card sx={{ minWidth: 500 }}>
+                <Grid
+                    container
+                    justifyContent="center"
+                    alignItems="center"
+                    wrap="wrap"
+                    spacing={1}
                 >
-                <Grid item xs={3}/>
-                <Grid item xs={6} style={{ textAlign: 'center' }}>
-                    <Typography variant="h1">Project Name</Typography>
-                    <IndexForm onSubmitSuccess={handleSubmitSuccess}/>
+                    <Grid item xs={12} style={{ textAlign: 'center' }}>
+                        <Typography variant="h1">Tetris</Typography>
+                        <IndexForm onSubmitSuccess={handleSubmitSuccess} />
+                    </Grid>
                 </Grid>
-                <Grid item xs={3}/>
-            </Grid>
-            
-        </>
-    )
+            </Card>
+        </Grid>
+    );
 }
 
 export default IndexPage
-

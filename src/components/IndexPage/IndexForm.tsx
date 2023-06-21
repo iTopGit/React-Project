@@ -4,21 +4,12 @@ import { Button, TextField } from "@mui/material"
 import { IScoreRequest, addAppScore } from "../../api/scoreApi"
 import { ProjectName } from "../../App"
 
+
 function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
 
-    const [loading, setLoading] = useState<boolean>(false)
-    
-    const navigate = useNavigate()
-
-    const gotoBoard = () => {
-        navigate('/board')
-    }
-    
-    const goToScore = () => {
-        navigate('/scores')
-    }
-
-    const [name, setName] = useState('');
+    const [loading, setLoading] = useState<boolean>(false);
+    const navigate = useNavigate();
+    const [name, setName] = useState("");
     
     const [requestBody, setRequestBody] = useState<IScoreRequest>({
         name: '',
@@ -26,9 +17,10 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
         projectName: ProjectName,
     })
 
-
+    
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log('event.target.name: ', event.target.value)
+        setName(event.target.value)
         setRequestBody((prev) => {
             return {
                 ...prev,
@@ -49,11 +41,26 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
         }
     }
 
+    const gotoBoard = () => {
+        if (name.trim() === '') {
+            return;
+        }
+        setName("");
+        navigate('/board')
+    }
+    
+    const goToScore = () => {
+        if (name.trim() === '') {
+            return;
+        }
+        setName("");
+        navigate('/scores')
+    }
+
     return (
         <>
             <form onSubmit={handleSubmit}>
             <TextField
-                fullWidth
                 sx={{ m: 1 }}
                 label="Player Name"
                 name="name"
@@ -61,17 +68,18 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
                 className='nameField'
                 required
             /><br/>
+
             <Button 
                 variant="contained"
-                sx={{ m: 1 }}
-                onClick={gotoBoard}
+                sx={{ m: 2 }}
                 type="submit"
+                onClick={gotoBoard}
             >
                 Start
             </Button>
             <Button 
                 variant="contained"
-                sx={{ m: 1 }}
+                sx={{ m: 2 }}
                 onClick={goToScore}
                 type="submit"
             >
