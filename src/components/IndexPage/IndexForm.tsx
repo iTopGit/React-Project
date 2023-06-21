@@ -18,6 +18,7 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
     })
 
     
+    
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log('event.target.name: ', event.target.value)
         setName(event.target.value)
@@ -46,7 +47,7 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
             return;
         }
         setName("");
-        navigate('/board')
+        navigate('/board', { state: { name } })
     }
     
     const goToScore = () => {
@@ -54,7 +55,7 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
             return;
         }
         setName("");
-        navigate('/scores')
+        navigate('/scores', { state: { name }})
     }
 
     return (
@@ -89,6 +90,7 @@ function IndexForm ({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
         </>
     )
 }
+
 
 export default IndexForm
 

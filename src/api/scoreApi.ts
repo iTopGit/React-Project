@@ -10,7 +10,8 @@ const headers = {
 }
 
 export interface IScoreRequest {
-    id?: number
+    date: string | number | Date
+    id: number
     projectName: string
     score: number
     name: string
