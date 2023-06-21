@@ -43,7 +43,7 @@ function ScoreLists({ scoreLists, onDeleteSuccess }: ScoreListsProps) {
     } else if (choice === 'low to high') {
         sortedScores.sort((a, b) => a.score - b.score);
     } else if (choice === 'new to old') {
-        sortedScores.sort((a, b) => b.id - a.id);
+        sortedScores.sort((a, b) => (b.id ?? 0) - (a.id ?? 0));
     }
 
     return (
