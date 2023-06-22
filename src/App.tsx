@@ -1,6 +1,6 @@
 import MatApp from './components/MatApp'
 
-export const ProjectName = 'Nook Matching Game'
+export const ProjectName = 'Tetris Game'
 
 function App() {
     return <MatApp />

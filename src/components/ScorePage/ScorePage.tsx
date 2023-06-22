@@ -27,10 +27,11 @@ function ScorePage() {
     }, [])
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
             <Grid item xs={12}>
                 <ScoreForm onSubmitSuccess={handleSubmitSuccess} />
             </Grid>
+
             <Grid item xs={12} md={6}>
                 <ScoreLists
                     scoreLists={scoresList}

@@ -1,14 +1,16 @@
 import { Button, Stack, TextField } from '@mui/material'
 import { useState } from 'react'
-
+import { useLocation } from "react-router-dom";
 import { ProjectName } from '../../App'
 import { IScoreRequest, addAppScore } from '../../api/scoreApi'
 
 function ScoreForm({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
     const [loading, setLoading] = useState<boolean>(false)
 
+    const location = useLocation();
+    const name = location.state?.name;
     const [requestBody, setRequestBody] = useState<IScoreRequest>({
-        name: '',
+        name: name,
         score: 0,
         projectName: ProjectName,
     })
@@ -36,6 +38,7 @@ function ScoreForm({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
     }
 
     return (
+        
         <form onSubmit={handleSubmit}>
             <Stack spacing={2}>
                 <TextField
@@ -52,6 +55,9 @@ function ScoreForm({ onSubmitSuccess }: { onSubmitSuccess: () => void }) {
                 <TextField
                     label="Player Name"
                     name="name"
+                    value={name}
+                    disabled
+                    InputLabelProps={{ shrink: true }}
                     onChange={onChange}
                 />
             </Stack>
