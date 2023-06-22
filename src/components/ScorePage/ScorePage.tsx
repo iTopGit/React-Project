@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-
 import { Grid } from '@mui/material'
 import ScoreForm from './ScoreForm'
 import ScoreLists from './ScoreLists'
@@ -8,11 +7,7 @@ import { ProjectName } from '../../App'
 
 function ScorePage() {
     const [scoresList, setScoresList] = useState<IScoreRequest[]>([])
-
-    const handleSubmitSuccess = async () => {
-        const result = await getAllAppScores(ProjectName)
-        setScoresList(result!)
-    }
+    console.log(scoresList)
 
     const handleDeleteSuccess = (deleteScoreID: number) => {
         setScoresList((prev) => {
@@ -29,7 +24,7 @@ function ScorePage() {
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
-                <ScoreForm onSubmitSuccess={handleSubmitSuccess} />
+                <ScoreForm/>
             </Grid>
 
             <Grid item xs={12} md={6}>

@@ -5,6 +5,7 @@ import {
     ListItem,
     ListItemAvatar,
     ListItemText,
+    Typography,
 } from '@mui/material'
 import { IScoreRequest, deleteAppScore } from '../../api/scoreApi'
 import ImageIcon from '@mui/icons-material/Image'
@@ -68,6 +69,7 @@ function ScoreLists({ scoreLists, onDeleteSuccess }: ScoreListsProps) {
                 <MenuItem onClick={() => handleClose('low to high')}>low to high</MenuItem>
             </Menu>
             <List dense>
+                
                 {sortedScores.map((score) => (
                     <ListItem
                         key={score.id}
