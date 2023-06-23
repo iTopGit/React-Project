@@ -3,15 +3,16 @@ li {
     background: rgba(25, 25, 112, 0.3);
     border: 5px double rgba(0, 255, 255, 1);
     border-bottom: none;
-    padding: 2%;
-    padding-bottom: none;
     border-radius: 10px 10px 0 0;
+    padding-top: 5%;
+    padding-left: 5%;
+    
 }
 
 .GameStats {
     position: absolute;
     left: 133vh;
-    top: 38vh;
+    top: 20vh;
     width: 15vw;
     list-style-type: none;
     color: rgba(255, 255, 255, 1);
@@ -33,11 +34,9 @@ li {
     background: rgba(25, 25, 112, 0.3);
     border-bottom:5px double rgba(0, 255, 255, 1);
     border-top: none ;
-    padding: 2%;
-    padding-top: none;
     border-radius: 0 0 10px 10px;
-}
-
-.shadow {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 0;
+    padding-left: 10%;
+    padding-top: none;
+    
 }

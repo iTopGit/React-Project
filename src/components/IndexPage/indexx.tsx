@@ -1,11 +1,12 @@
 import { Card, Grid, Typography } from "@mui/material";
 import { IScoreRequest } from '../../api/scoreApi'
+import './Index.css'
 
 interface ScoreListsProps {
   scoreLists: IScoreRequest[];
 }
 
-function indexx({ scoreLists }: ScoreListsProps) {
+function Indexx({ scoreLists }: ScoreListsProps) {
   console.log(scoreLists);
 
   let sortedScores = [...scoreLists];
@@ -13,18 +14,22 @@ function indexx({ scoreLists }: ScoreListsProps) {
   const topFiveScores = sortedScores.slice(0, 5);
 
   return (
-    <Grid
+    <Grid 
       container
       justifyContent="center"
       alignItems="center"
-      height="100vh"
       spacing={5} 
+      sx={{p:3}}
     >
       <Grid item xs={12}>
-        <Typography variant="h4">High Score:</Typography>
-        {topFiveScores.map((score) => (
-          <Typography key={score.id} variant="h6">
-            {score.score}
+        <Typography fontFamily={'Gloria Hallelujah'} variant="h4">High Score:</Typography>
+        {topFiveScores.map((score, index) => (
+          <Typography 
+            fontFamily={'Gloria Hallelujah'} 
+            key={score.id} 
+            variant="h6"
+          >
+            {index + 1}. {score.name}: {score.score}
           </Typography>
         ))}
       </Grid>
@@ -32,4 +37,4 @@ function indexx({ scoreLists }: ScoreListsProps) {
   );
 }
 
-export default indexx;
+export default Indexx;
