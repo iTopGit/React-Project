@@ -38,7 +38,8 @@ const GameController = ({
     } else if (action === Action.Quit) {
       setGameOver(true);
     } else {
-      if (actionIsDrop(action)) pauseDropTime();
+      // FIX PAUSE WHEN HOLD DROP 
+      if (actionIsDrop(action) && (action !== Action.SlowDrop)) pauseDropTime();
       if (!dropTime) {
         return;
       }

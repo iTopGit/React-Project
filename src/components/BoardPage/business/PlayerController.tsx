@@ -56,10 +56,13 @@ export const movePlayer = ({ delta, position, shape, board }) => {
 const attemptMovement = ({ board, action, player, setPlayer, setGameOver }) => {
   const delta = { row: 0, column: 0 };
   let isFastDropping = false;
+  console.log('attemptMovement')
 
   if (action === Action.FastDrop) {
+    console.log('FastDrop')
     isFastDropping = true;
   } else if (action === Action.SlowDrop) {
+    console.log('SlowDrop')
     delta.row += 1;
   } else if (action === Action.Left) {
     delta.column -= 1;
