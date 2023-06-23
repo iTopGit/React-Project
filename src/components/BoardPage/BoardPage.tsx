@@ -1,5 +1,5 @@
 import "./styles.css";
-import Game from "./Game";
+import "../rainbow.css"
 import { useGameOver } from "./hooks/useGameOver";
 import Tetris from "./Tetris";
 import Menu from "./Menu";
