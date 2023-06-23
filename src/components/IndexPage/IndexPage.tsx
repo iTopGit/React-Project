@@ -23,12 +23,12 @@ function IndexPage() {
             <Grid item xs={6}>
                 <Card >
                     <Grid item xs={12} style={{ textAlign: 'center' }}>
-                        <Typography fontFamily={'Gloria Hallelujah'} variant="h1">Tetris Game</Typography>
+                        <Typography fontFamily={'Gloria Hallelujah'} variant="h1">Tetris</Typography>
                         <IndexForm />
                     </Grid>
                 </Card>
             </Grid>
-            <Grid item xs={3} sm={6} style={{ display: 'flex', justifyContent: 'center'}}>
+            <Grid item xs={3} style={{ display: 'flex', justifyContent: 'center'}}>
                 <Card style={{ height: '100%' }}>
                     <Indexx scoreLists={scoresList} />
                 </Card>
