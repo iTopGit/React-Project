@@ -1,71 +1,74 @@
-import "./GameController.css";
+import './GameController.css'
 
-import { Action, actionForKey, actionIsDrop } from "./business/Input";
-import { playerController } from "./business/PlayerController";
+// Combine all the controlling component into a working control system
 
-import { useDropTime } from "./hooks/useDropTime";
-import { useInterval } from "./hooks/useInterval";
+import { Action, actionForKey, actionIsDrop } from './business/Input'
+import { playerController } from './business/PlayerController'
+
+import { useDropTime } from './hooks/useDropTime'
+import { useInterval } from './hooks/useInterval'
 
 const GameController = ({
-  board,
-  gameStats,
-  player,
-  setGameOver,
-  setPlayer
+    board,
+    gameStats,
+    player,
+    setGameOver,
+    setPlayer,
 }) => {
-  const [dropTime, pauseDropTime, resumeDropTime] = useDropTime({
-    gameStats
-  });
+    const [dropTime, pauseDropTime, resumeDropTime] = useDropTime({
+        gameStats,
+    })
 
-  useInterval(() => {
-    handleInput({ action: Action.SlowDrop });
-  }, dropTime);
+    useInterval(() => {
+        handleInput({ action: Action.SlowDrop })
+    }, dropTime)
 
-  const onKeyUp = ({ code }) => {
-    const action = actionForKey(code);
-    if (actionIsDrop(action)) resumeDropTime();
-  };
-
-  const onKeyDown = ({ code }) => {
-    const action = actionForKey(code);
-
-    if (action === Action.Pause) {
-      if (dropTime) {
-        pauseDropTime();
-      } else {
-        resumeDropTime();
-      }
-    } else if (action === Action.Quit) {
-      setGameOver(true);
-    } else {
-      // FIX PAUSE WHEN HOLD DROP 
-      if (actionIsDrop(action) && (action !== Action.SlowDrop)) pauseDropTime();
-      if (!dropTime) {
-        return;
-      }
-      handleInput({ action });
+    const onKeyUp = ({ code }) => {
+        const action = actionForKey(code)
+        if (actionIsDrop(action)) resumeDropTime()
     }
-  };
 
-  const handleInput = ({ action }) => {
-    playerController({
-      action,
-      board,
-      player,
-      setPlayer,
-      setGameOver
-    });
-  };
+    const onKeyDown = ({ code }) => {
+        const action = actionForKey(code)
 
-  return (
-    <input
-      className="GameController"
-      type="text"
-      onKeyDown={onKeyDown}
-      onKeyUp={onKeyUp}
-      autoFocus
-    />
-  );
-};
+        if (action === Action.Pause) {
+            if (dropTime) {
+                pauseDropTime()
+            } else {
+                resumeDropTime()
+            }
+        } else if (action === Action.Quit) {
+            setGameOver(true)
+        } else {
+            // FIX PAUSE WHEN HOLD DROP
+            if (actionIsDrop(action) && action !== Action.SlowDrop)
+                pauseDropTime()
+            if (!dropTime) {
+                return
+            }
+            handleInput({ action })
+        }
+    }
 
-export default GameController;
+    const handleInput = ({ action }) => {
+        playerController({
+            action,
+            board,
+            player,
+            setPlayer,
+            setGameOver,
+        })
+    }
+
+    return (
+        <input
+            className="GameController"
+            type="text"
+            onKeyDown={onKeyDown}
+            onKeyUp={onKeyUp}
+            autoFocus
+        />
+    )
+}
+
+export default GameController

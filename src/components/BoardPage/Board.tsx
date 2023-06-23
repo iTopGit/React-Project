@@ -1,22 +1,24 @@
-import "./Board.css";
+import './Board.css'
 
-import BoardCell from "./BoardCell";
+// Tetris Display
+
+import BoardCell from './BoardCell'
 
 const Board = ({ board }) => {
-  const boardStyles = {
-    gridTemplateRows: `repeat(${board.size.rows}, 1fr)`,
-    gridTemplateColumns: `repeat(${board.size.columns}, 1fr)`
-  };
+    const boardStyles = {
+        gridTemplateRows: `repeat(${board.size.rows}, 1fr)`,
+        gridTemplateColumns: `repeat(${board.size.columns}, 1fr)`,
+    }
 
-  return (
-    <div className="Board" style={boardStyles}>
-      {board.rows.map((row, y) =>
-        row.map((cell, x) => (
-          <BoardCell key={x * board.size.columns + x} cell={cell} />
-        ))
-      )}
-    </div>
-  );
-};
+    return (
+        <div className="Board" style={boardStyles}>
+            {board.rows.map((row, y) =>
+                row.map((cell, x) => (
+                    <BoardCell key={x * board.size.columns + x} cell={cell} />
+                )),
+            )}
+        </div>
+    )
+}
 
-export default Board;
+export default Board

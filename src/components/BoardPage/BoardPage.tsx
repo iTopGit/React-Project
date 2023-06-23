@@ -1,37 +1,39 @@
-import "./styles.css";
-import { useGameOver } from "./hooks/useGameOver";
-import Tetris from "./Tetris";
-import Menu from "./Menu";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { useGameStats } from'./hooks/useGameStats'
+import './styles.css'
+import Game from './Game'
+import { useGameOver } from './hooks/useGameOver'
+import Tetris from './Tetris'
+import Menu from './Menu'
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { useGameStats } from './hooks/useGameStats'
+
+// Compile the game function: Start, End
 
 export default function App() {
-  const [gameOver, setGameOver, resetGameOver] = useGameOver();
-  const [startGame, setStartGame] = useState(true);
-  const location = useLocation();
-  const name = location.state?.name;
+    const [gameOver, setGameOver, resetGameOver] = useGameOver()
+    const [startGame, setStartGame] = useState(true)
+    const location = useLocation()
+    const name = location.state?.name
 
-  const start = () => {
-    resetGameOver();
-    setStartGame(true);
-  };
+    console.log(name)
 
-  const endGame = () => {
-    // const [gameStats] = useGameStats();
-    const { points } = gameStats;
-    // console.log("GameOver, Score = "+ points)
-    setStartGame(false);
-    setGameOver(true);
-  };
+    const start = () => {
+        resetGameOver()
+        setStartGame(true)
+    }
 
-  return (
-    <div className="App">
-      {startGame ? (
-        <Tetris rows={20} columns={10} setGameOver={endGame} />
-      ) : (
-        <Menu onClick={start} />
-      )}
-    </div>
-  );
+    const endGame = () => {
+        setStartGame(false)
+        setGameOver(true)
+    }
+
+    return (
+        <div className="App">
+            {startGame ? (
+                <Tetris rows={20} columns={10} setGameOver={endGame} />
+            ) : (
+                <Menu onClick={start} />
+            )}
+        </div>
+    )
 }
