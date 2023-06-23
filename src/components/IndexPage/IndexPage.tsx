@@ -5,11 +5,9 @@ import { ProjectName } from '../../App'
 import IndexForm from './IndexForm'
 import Indexx from './indexx'
 import './Index.css'
-import backgroundImage from 'src/images/29Z_2105.w026.n002.432B.p1.432.jpg'
 
 function IndexPage() {
     const [scoresList, setScoresList] = useState<IScoreRequest[]>([])
-    console.log(scoresList)
 
     useEffect(() => {
         getAllAppScores(ProjectName).then((result) => {

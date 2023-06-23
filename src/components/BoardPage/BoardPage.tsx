@@ -1,13 +1,18 @@
 import "./styles.css";
-import Game from "./Game";
 import { useGameOver } from "./hooks/useGameOver";
 import Tetris from "./Tetris";
 import Menu from "./Menu";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useGameStats } from'./hooks/useGameStats'
 
 export default function App() {
   const [gameOver, setGameOver, resetGameOver] = useGameOver();
   const [startGame, setStartGame] = useState(true);
+  const location = useLocation();
+  const name = location.state?.name;
+  
+  console.log(name)
 
   const start = () => {
     resetGameOver();

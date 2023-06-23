@@ -7,7 +7,6 @@ interface ScoreListsProps {
 }
 
 function Indexx({ scoreLists }: ScoreListsProps) {
-  console.log(scoreLists);
 
   let sortedScores = [...scoreLists];
   sortedScores.sort((a, b) => b.score - a.score);

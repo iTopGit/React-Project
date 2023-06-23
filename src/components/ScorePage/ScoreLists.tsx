@@ -48,13 +48,14 @@ function ScoreLists({ scoreLists, onDeleteSuccess }: ScoreListsProps) {
     }
 
     return (
-        <div>
+        <div >
             <Button
-                sx={{ minWidth: 250 }}
+                sx={{ minWidth: 250,marginLeft:'50px' }}
                 fullWidth
                 variant="contained"
                 endIcon={<Icon component={ArrowDropDownIcon} />}
                 onClick={handleClick}
+                
             >
                 sort by {choice}
             </Button>
@@ -68,7 +69,7 @@ function ScoreLists({ scoreLists, onDeleteSuccess }: ScoreListsProps) {
                 <MenuItem onClick={() => handleClose('high to low')}>high to low</MenuItem>
                 <MenuItem onClick={() => handleClose('low to high')}>low to high</MenuItem>
             </Menu>
-            <List dense>
+            <List dense sx={{marginLeft:'50px'}}>
                 
                 {sortedScores.map((score) => (
                     <ListItem

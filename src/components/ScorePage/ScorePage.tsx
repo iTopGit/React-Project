@@ -7,7 +7,6 @@ import { ProjectName } from '../../App'
 
 function ScorePage() {
     const [scoresList, setScoresList] = useState<IScoreRequest[]>([])
-    console.log(scoresList)
 
     const handleDeleteSuccess = (deleteScoreID: number) => {
         setScoresList((prev) => {

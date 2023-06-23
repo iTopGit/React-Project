@@ -12,8 +12,9 @@ function ScoreForm() {
     return (
         
         <form>
-            <Stack spacing={2}>
+            <Stack spacing={3} margin={5}>
                 <TextField
+                    sx={{justifyContent:'center' ,alignContent:'center'}}
                     label="Project Name"
                     name="projectName"
                     value={ProjectName}
@@ -21,6 +22,7 @@ function ScoreForm() {
                     InputLabelProps={{ shrink: true }}
                 />
                 <TextField
+                    sx={{color: 'white', alignItems: 'left', justifyContent: 'center'}}
                     label="Player Name"
                     name="name"
                     value={name}

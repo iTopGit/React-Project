@@ -5,7 +5,7 @@ import "./GameStats.css";
 const GameStats = ({ gameStats }) => {
   const { level, points, linesCompleted, linesPerLevel } = gameStats;
   const linesToLevel = linesPerLevel - linesCompleted;
-
+  console.log(points)
   return (
     <ul className="GameStats GameStats__right">
       <li>Level</li>
