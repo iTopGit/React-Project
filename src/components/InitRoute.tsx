@@ -4,7 +4,6 @@ import IndexPage from './IndexPage/IndexPage'
 import BoardPage from './BoardPage/BoardPage'
 import MatLayout from './MatLayout'
 import ScorePage from './ScorePage/ScorePage'
-import TestPage from './TestPage'
 
 const router = createBrowserRouter([
     {
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
             {
                 path: 'scores',
                 element: <ScorePage />,
-            },
-            {
-                path: 'test',
-                element: <TestPage />,
             },
         ],
     },
