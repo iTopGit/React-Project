@@ -5,7 +5,7 @@ import { ProjectName } from '../../App'
 import IndexForm from './IndexForm'
 import Indexx from './indexx'
 
-function ScorePage() {
+function IndexPage() {
     const [scoresList, setScoresList] = useState<IScoreRequest[]>([])
     console.log(scoresList)
 
@@ -38,4 +38,4 @@ function ScorePage() {
     );
 }
 
-export default ScorePage
+export default IndexPage
