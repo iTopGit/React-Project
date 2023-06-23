@@ -8,12 +8,12 @@ const GameStats = ({ gameStats }) => {
   console.log(points)
   return (
     <ul className="GameStats GameStats__right">
-      <li>Level</li>
-      <li className="value">{level}</li>
-      <li>Lines to level</li>
-      <li className="value">{linesToLevel}</li>
-      <li>Points</li>
-      <li className="value">{points}</li>
+      <li className="stat">Level</li>
+      <li className="value stat">{level}</li>
+      <li className="stat">Lines to level</li>
+      <li className="value stat">{linesToLevel}</li>
+      <li className="stat">Points</li>
+      <li className="value stat">{points}</li>
     </ul>
   );
 };

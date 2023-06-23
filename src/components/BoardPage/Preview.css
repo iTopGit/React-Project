@@ -1,10 +1,11 @@
 .Preview {
     position: absolute;
     top: 0;
-    left: 60vw;
-    background: rgba(0, 0, 0, 0.1);
-    border: 10px solid rgba(0, 0, 0, 0);
+    left: 28vw;
+    background: rgba(25, 25, 112, 0.3);
+    border: 5px double rgba(0, 255, 255, 1);
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   
   .Preview-board {

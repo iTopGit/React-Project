@@ -1,0 +1,140 @@
+.text-rainbow {
+    animation: text-color-loop 1s linear infinite;
+    color: hsl(0 100% 50%);
+}
+  
+@keyframes text-color-loop {
+    0% {
+        color: hsl(0 100% 50%);
+    }
+    8.33% {
+        color: hsl(30 100% 50%);
+    }
+    16.67% {
+        color: hsl(60 100% 50%);
+    }
+    25% {
+        color: hsl(90 100% 50%);
+    }
+    33.33% {
+        color: hsl(120 100% 50%);
+    }
+    41.67% {
+        color: hsl(150 100% 50%);
+    }
+    50% {
+        color: hsl(180 100% 50%);
+    }
+    58.33% {
+        color: hsl(210 100% 50%);
+    }
+    66.67% {
+        color: hsl(240 100% 50%);
+    }
+    75% {
+        color: hsl(270 100% 50%);
+    }
+    83.33% {
+        color: hsl(300 100% 50%);
+    }
+    91.67% {
+        color: hsl(330 100% 50%);
+    }
+    100% {
+        color: hsl(360 100% 50%);
+    }
+}
+  
+.X {
+      animation: background-color-loop 3s linear infinite;
+      background-color: hsl(0 100% 50%);
+    }
+    
+    @keyframes background-color-loop {
+      0% {
+          background-color: hsl(0 100% 50%);
+      }
+      8.33% {
+          background-color: hsl(30 100% 50%);
+      }
+      16.67% {
+          background-color: hsl(60 100% 50%);
+      }
+      25% {
+          background-color: hsl(90 100% 50%);
+      }
+      33.33% {
+          background-color: hsl(120 100% 50%);
+      }
+      41.67% {
+          background-color: hsl(150 100% 50%);
+      }
+      50% {
+          background-color: hsl(180 100% 50%);
+      }
+      58.33% {
+          background-color: hsl(210 100% 50%);
+      }
+      66.67% {
+          background-color: hsl(240 100% 50%);
+      }
+      75% {
+          background-color: hsl(270 100% 50%);
+      }
+      83.33% {
+          background-color: hsl(300 100% 50%);
+      }
+      91.67% {
+          background-color: hsl(330 100% 50%);
+      }
+      100% {
+          background-color: hsl(360 100% 50%);
+      }
+}
+
+.App {
+    animation: background-color-loop 32s linear infinite;
+    background-color: hsl(0 100% 75%);
+}
+  
+  @keyframes background-color-loop {
+    0% {
+        background-color: hsl(0 100% 75%);
+    }
+    8.33% {
+        background-color: hsl(30 100% 75%);
+    }
+    16.67% {
+        background-color: hsl(60 100% 75%);
+    }
+    25% {
+        background-color: hsl(90 100% 75%);
+    }
+    33.33% {
+        background-color: hsl(120 100% 75%);
+    }
+    41.67% {
+        background-color: hsl(150 100% 75%);
+    }
+    50% {
+        background-color: hsl(180 100% 75%);
+    }
+    58.33% {
+        background-color: hsl(210 100% 75%);
+    }
+    66.67% {
+        background-color: hsl(240 100% 75%);
+    }
+    75% {
+        background-color: hsl(270 100% 75%);
+    }
+    83.33% {
+        background-color: hsl(300 100% 75%);
+    }
+    91.67% {
+        background-color: hsl(330 100% 75%);
+    }
+    100% {
+        background-color: hsl(360 100% 75%);
+    }
+}

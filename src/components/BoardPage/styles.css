@@ -1,4 +1,18 @@
 * {
+<<<<<<< HEAD
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    padding: 20px;
+  }
+=======
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,3 +25,4 @@
   height: 100vh;
   padding: 20px;
 }
+>>>>>>> 9373bf449b399cd9cfc9de755aeff64d2bd629f5
