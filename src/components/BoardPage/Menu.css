@@ -2,11 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    text-align: center;
+    min-height: 100vh;
     z-index: 100;
   }
 
   .Button {
+    margin: 10vh;
     padding: 40px 80px;
     font-size: 2em;
     border-radius: 20px;
