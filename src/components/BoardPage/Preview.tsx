@@ -1,4 +1,4 @@
-import "./Preview.css";
+import "../style/Preview.css";
 import React from "react";
 
 import { buildBoard } from "./business/Board";

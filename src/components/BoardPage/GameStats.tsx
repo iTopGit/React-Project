@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./GameStats.css";
+import "../style/GameStats.css";
 
 const GameStats = ({ gameStats }) => {
   const { level, points, linesCompleted, linesPerLevel } = gameStats;

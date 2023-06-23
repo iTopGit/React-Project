@@ -1,4 +1,5 @@
-import './GameController.css'
+import { useEffect } from 'react'
+import '../style/GameController.css'
 
 // Combine all the controlling component into a working control system
 
@@ -67,6 +68,7 @@ const GameController = ({
             onKeyDown={onKeyDown}
             onKeyUp={onKeyUp}
             autoFocus
+            readOnly
         />
     )
 }

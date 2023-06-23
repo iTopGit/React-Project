@@ -1,4 +1,4 @@
-import './Board.css'
+import '../style/Board.css'
 
 // Tetris Display
 

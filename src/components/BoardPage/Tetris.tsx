@@ -1,5 +1,4 @@
-import './Tetris.css'
-
+import '../style/Tetris.css'
 // Combine all the game component to display it on the main page
 
 import Board from './Board'

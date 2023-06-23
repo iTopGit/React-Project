@@ -1,4 +1,4 @@
-import "./Menu.css";
+import "../style/Menu.css";
 import { useNavigate } from 'react-router-dom'; // Assuming you are using React Router
 
 const Menu = ({ onClick }) => {

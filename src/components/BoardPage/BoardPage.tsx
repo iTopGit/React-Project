@@ -1,11 +1,9 @@
-import './styles.css'
-import Game from './Game'
+import '../style/styles.css'
 import { useGameOver } from './hooks/useGameOver'
 import Tetris from './Tetris'
 import Menu from './Menu'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { useGameStats } from './hooks/useGameStats'
 
 // Compile the game function: Start, End
 
