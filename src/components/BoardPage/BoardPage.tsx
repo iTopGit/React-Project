@@ -1,5 +1,4 @@
 import "./styles.css";
-import Game from "./Game";
 import { useGameOver } from "./hooks/useGameOver";
 import Tetris from "./Tetris";
 import Menu from "./Menu";
@@ -12,8 +11,6 @@ export default function App() {
   const [startGame, setStartGame] = useState(true);
   const location = useLocation();
   const name = location.state?.name;
-  
-  console.log(name)
 
   const start = () => {
     resetGameOver();
@@ -21,6 +18,9 @@ export default function App() {
   };
 
   const endGame = () => {
+    // const [gameStats] = useGameStats();
+    const { points } = gameStats;
+    // console.log("GameOver, Score = "+ points)
     setStartGame(false);
     setGameOver(true);
   };
