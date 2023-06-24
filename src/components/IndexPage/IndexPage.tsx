@@ -4,7 +4,7 @@ import { IScoreRequest, getAllAppScores } from '../../api/scoreApi'
 import { ProjectName } from '../../App'
 import IndexForm from './IndexForm'
 import Indexx from './indexx'
-import './Index.css'
+import '../style/Index.css'
 
 function IndexPage() {
     const [scoresList, setScoresList] = useState<IScoreRequest[]>([])

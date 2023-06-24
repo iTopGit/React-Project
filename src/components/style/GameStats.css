@@ -1,0 +1,42 @@
+.stat {
+    
+    background: rgba(25, 25, 112, 0.3);
+    border: 5px double rgba(0, 255, 255, 1);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    padding-top: 5%;
+    padding-left: 5%;
+    
+}
+
+.GameStats {
+    position: absolute;
+    left: 133vh;
+    top: 20vh;
+    width: 15vw;
+    list-style-type: none;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bolder;
+    border: 0px;
+    height: fit-content;
+}
+
+.GameStats__right {
+    right: 0;
+    bottom: 0;
+    text-align: left;
+}
+
+.GameStats .value {
+    font-size: 2.8rem;
+    margin-bottom: 0.5em;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(25, 25, 112, 0.3);
+    border-bottom:5px double rgba(0, 255, 255, 1);
+    border-top: none ;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+    padding-left: 10%;
+    padding-top: none;
+    
+}

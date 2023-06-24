@@ -1,6 +1,7 @@
 import { Card, Grid, Typography } from "@mui/material";
 import { IScoreRequest } from '../../api/scoreApi'
-import './Index.css'
+import '../style/Index.css'
+import '../style/rainbow.css' 
 
 interface ScoreListsProps {
   scoreLists: IScoreRequest[];

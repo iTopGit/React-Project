@@ -92,7 +92,7 @@
       }
 }
 
-.App {
+body {
     animation: background-color-loop 32s linear infinite;
     background-color: hsl(0 100% 75%);
 }

@@ -7,7 +7,7 @@
     font-family: 'Gloria Hallelujah';
 }
 body {
-    background: linear-gradient(#406 ,#2B32BD )
+    /* background: linear-gradient(#406 ,#2B32BD ) */
 }
 .background {
     contain: layout;
