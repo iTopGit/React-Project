@@ -1,12 +1,40 @@
-import "../style/Menu.css";
-import { useNavigate } from 'react-router-dom'; // Assuming you are using React Router
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { addAppScore } from '../../api/scoreApi';
+import '../style/Menu.css';
 
-const Menu = ({ onClick }) => {
-
+const Menu = ({ onClick, points }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const name = location.state?.name;
+  const [requestBody, setRequestBody] = useState({
+    name: name,
+    score: points,
+    projectName: 'Tetris Game',
+  });
+
+  useEffect(() => {
+    addScoreAndSubmit(); // Automatically submit the score
+  }, [points]);
 
   const gotoBoard = () => {
-    navigate('/'); // Replace 'name' with the actual value you want to pass
+    navigate('/');
+  };
+
+  const addScoreAndSubmit = () => {
+    addAppScore(requestBody)
+      .then((response) => {
+        // Handle success response
+        onSubmitSuccess();
+      })
+      .catch((error) => {
+        // Handle error
+        console.error('Failed to add score:', error);
+      });
+  };
+
+  const onSubmitSuccess = () => {
+    // Handle successful submission
   };
 
   return (
